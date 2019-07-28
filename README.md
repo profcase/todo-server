@@ -48,14 +48,6 @@ choco upgrade all -y
 - <http://localhost:5001>
 - <http://localhost:5001/todo>
 
-## Test requests with Postman
-
-- Install [Postman](https://www.getpostman.com/)
-- Set VERB + URI (and configure request if sending POST data)
-- GET <http://localhost:5001/todo> - Send
-- POST <http://localhost:5001/todo> - set Body / Raw / JSON - Send
-- DELETE <http://localhost:5001/todo/id> - copy id from post call and replace id - Send
-
 ## Demo site hosted with Heroku web hosting service (free tier)
 
 - [Heroku](https://www.heroku.com/)
@@ -69,6 +61,25 @@ Optional: update the following URIs to point to your Heroku app:
 
 - <https://todo-server-heroku-app.herokuapp.com/>
 - <https://todo-server-heroku-app.herokuapp.com/todo>
+
+## Test requests with Postman
+
+- Install [Postman](https://www.getpostman.com/)
+
+Collection: todo-server (local)
+
+- Set VERB + URI (and configure request if sending POST data)
+- GET <http://localhost:5001/todo> - Send
+- POST <http://localhost:5001/todo> - set Body / Raw / JSON / set "name" - Send
+- DELETE <http://localhost:5001/todo/id> - copy id from post call and replace id - Send
+
+Collection: todo-server (heroku)
+
+- GET <https://todo-server-heroku-app.herokuapp.com/todo>
+- POST <https://todo-server-heroku-app.herokuapp.com/todo> - set Body / Raw / JSON - Send
+- DELETE <https://todo-server-heroku-app.herokuapp.com/todo/id> - copy id from post call and replace id - Send
+
+See [Postman Screenshot](docs/postman.PNG)
 
 ## Resources
 
