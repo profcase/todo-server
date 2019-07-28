@@ -42,6 +42,8 @@ choco upgrade all -y
 ## Data hosted with Atlas (free tier)
 
 - [Atlas](https://www.mongodb.com/cloud/atlas)
+- config: copy example to default.json and add password
+- config/default.json: list in .gitignore to keep pwd secure
 
 ## View in browser
 

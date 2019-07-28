@@ -4,7 +4,10 @@ const express = require('express')   // web framework for Node.js
 const mongoose = require('mongoose') // MongoDB object modeling  
 const morgan = require('morgan')     // HTTP request logger middleware 
 
-const DEFAULT_PORT = config.get("port")
+// Use hosting values if available, otherwise default 
+const environment = process.env.NODE_ENV || 'development'
+const dbURI = process.env.MONGODB_URI || config.get("mongoURI")
+const port = process.env.PORT || config.get("port");
 
 // create Express app
 const app = express()
@@ -22,9 +25,7 @@ app.use(morgan('combined'))
 app.use('/todo', require('./routes/todo'));
 app.use('/', (req,res)=> {res.send('Try /todo')})
 
-// Configure data access with Mongoose
-const dbURI = config.get("mongoURI")
-
+// Connect to data store
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
@@ -33,11 +34,7 @@ mongoose
   .then(() => console.log('MongoDB connected.'))
   .catch(err => console.log(err))
 
-// Use hosting values if available, otherwise default 
-const port = process.env.PORT || DEFAULT_PORT;
-const environment = process.env.NODE_ENV || 'development'
-
+// start listening & tell user app location
 app.listen(port, () =>{
-   // tell user where app is running
    console.log(`App running on ${port} in ${environment}.`)
 })
