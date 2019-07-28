@@ -1,0 +1,35 @@
+{
+  "name": "todo-server",
+  "version": "1.0.0",
+  "description": "Todo server using MongoDB, Node.js, and Express web framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/profcase/todo-server"
+  },
+  "keywords": [
+    "Todo",
+    "MongoDB",
+    "Node.js",
+    "Express",
+    "web",
+    "service",
+    "JSON"
+  ],
+  "author": "Denise Case",
+  "license": "MIT",
+  "dependencies": {
+    "config": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "mongoose": "latest",
+    "morgan": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  }
+}
