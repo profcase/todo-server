@@ -16,6 +16,8 @@ This is just the server-side - no client-side GUI is included.
 - A text editor (e.g., VS Code or Notepad++, or Chrome)
 - Windows Powershell to run commands
 - Node.js
+- Atlas MongoDB hosting account (free)
+- Heroku web app hosting account (free)
 
 ## Optional Windows - installing & upgrading programs
 
@@ -32,16 +34,15 @@ choco upgrade all -y
 - In Atlas, create new context (e.g., todo-server-data)
 - Get connection string
 - config: copy example to default.json and add password
-- config/default.json: list in .gitignore to keep pwd secure
+- config/default.json: listed in .gitignore to keep password secure
 
 ## Run locally against your Atlas MongoDB
 
 - Fork the repo
 - Clone your repo down to your local machine
 - Create config/default.json
-
 - Install dependencies with `npm install`
-- Run the server locally with `npm start`
+- Run the server locally with `npm run dev`
 
 ## View local app in browser
 
@@ -53,7 +54,8 @@ choco upgrade all -y
 - [Heroku](https://www.heroku.com/)
 - Create free account
 - New / Create new app / enter a name / create app.
-- Under app settings, create environment variable MONGODB_URI and set to Atlas Connection string (private and secure).
+- Under app Settings, create environment variable MONGODB_URI and set to Atlas Connection string (private and secure).
+- Under app Deploy / Deployment mthod / select GitHub master branch to deploy when there's a new commit pushed to master.
 
 ## View Heroku app in browser
 
@@ -66,14 +68,14 @@ Optional: update the following URIs to point to your Heroku app:
 
 - Install [Postman](https://www.getpostman.com/)
 
-Collection: todo-server (local)
+Collection: "todo-server (local)"
 
 - Set VERB + URI (and configure request if sending POST data)
 - GET <http://localhost:5001/todo> - Send
 - POST <http://localhost:5001/todo> - set Body / Raw / JSON / set "name" - Send
 - DELETE <http://localhost:5001/todo/id> - copy id from post call and replace id - Send
 
-Collection: todo-server (heroku)
+Collection: "todo-server (heroku)"
 
 - GET <https://todo-server-heroku-app.herokuapp.com/todo>
 - POST <https://todo-server-heroku-app.herokuapp.com/todo> - set Body / Raw / JSON - Send

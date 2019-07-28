@@ -34,7 +34,7 @@ mongoose
   .then(() => console.log('MongoDB connected.'))
   .catch(err => console.log(err))
 
-// start listening & tell user app location
+// start listening & inform user
 app.listen(port, () =>{
    console.log(`App running on ${port} in ${environment}.`)
 })
