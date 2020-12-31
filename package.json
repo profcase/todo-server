@@ -27,7 +27,7 @@
     "config": "3.3.2",
     "cors": "latest",
     "express": "latest",
-    "mongoose": "5.9.15",
+    "mongoose": "5.10.3",
     "morgan": "latest"
   },
   "devDependencies": {
