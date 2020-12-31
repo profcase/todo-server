@@ -24,10 +24,10 @@
   "author": "Denise Case",
   "license": "MIT",
   "dependencies": {
-    "config": "3.3.3",
+    "config": "latest",
     "cors": "latest",
     "express": "latest",
-    "mongoose": "5.11.7",
+    "mongoose": "latest",
     "morgan": "latest"
   },
   "devDependencies": {
