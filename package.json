@@ -24,7 +24,7 @@
   "author": "Denise Case",
   "license": "MIT",
   "dependencies": {
-    "config": "latest",
+    "config": "3.3.2",
     "cors": "latest",
     "express": "latest",
     "mongoose": "5.10.3",
